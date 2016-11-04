@@ -2,16 +2,18 @@ package ua.pp.krotov;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.Test;
 
 /**
  * Created by Victor on 04.11.2016.
  */
 public class Menubar extends StartPage {
     public Menubar (WebDriver driver) {
-
         super (driver);
     }
+    public WebDriver driver;
 
     //menuBar
 

@@ -27,20 +27,19 @@ public class MainClass {
 
         driver.get("http://www.bayramix.com.ua/");
 
+        //driver.findElement(By.xpath("//nav[@id='menu']//a[@class='level1' and @href='/kontakty.html']")).click();
+
         Contacts page = new Contacts(driver);
         Menubar menubar = new Menubar(driver);
 
         menubar.contacts.click();
 
-        /*String companyName = page.companyName.getText();
-        String companyAdress = page.companyAdress.getText();
-        String companyContacts = page.companyContacts.getText();
+        //String companyName = page.companyName.getText();
+        //String companyAdress = page.companyAdress.getText();
+        //String companyContacts = page.companyContacts.getText();
 
-        System.out.println("Компания: " + companyName);
-        System.out.println("Адресс: " + companyAdress);
-        System.out.println("Контакты : " + companyContacts);*/
-        //page.companyName.getText();
-        //page.companyAdress.getText();
-        //page.companyContacts.getText();
+        //System.out.println("Компания: " + page.companyName.getText());
+        //System.out.println("Адресс: " + page.companyAdress.getText());
+        //System.out.println("Контакты : " + page.companyContacts.getText());
     }
 }
