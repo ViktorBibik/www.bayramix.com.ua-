@@ -12,14 +12,14 @@ import java.util.concurrent.TimeUnit;
  * Created by Victor on 04.11.2016.
  */
 public class MainClass {
-    private WebDriver driver;
+    public WebDriver driver;
 
     @BeforeClass
     public void setUp() {
 
         System.setProperty("webdriver.gecko.driver","D:\\Selenium\\geckodriver.exe");
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
     @Test
@@ -28,14 +28,17 @@ public class MainClass {
         driver.get("http://www.bayramix.com.ua/");
 
         Contacts page = new Contacts(driver);
+        Menubar menubar = new Menubar(driver);
 
-        String companyName = page.companyName.getText();
+        menubar.contacts.click();
+
+        /*String companyName = page.companyName.getText();
         String companyAdress = page.companyAdress.getText();
         String companyContacts = page.companyContacts.getText();
 
         System.out.println("Компания: " + companyName);
         System.out.println("Адресс: " + companyAdress);
-        System.out.println("Контакты : " + companyContacts);
+        System.out.println("Контакты : " + companyContacts);*/
         //page.companyName.getText();
         //page.companyAdress.getText();
         //page.companyContacts.getText();
