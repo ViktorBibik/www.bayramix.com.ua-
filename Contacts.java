@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class Contacts extends StartPage {
     public Contacts (WebDriver driver) {
+
         super (driver);
     }
 

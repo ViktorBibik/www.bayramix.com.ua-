@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class Menubar extends StartPage {
     public Menubar (WebDriver driver) {
+
         super (driver);
     }
 
